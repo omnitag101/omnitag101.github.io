@@ -362,7 +362,7 @@ tailwind.config = {
         </h1>
 
         <p class="text-text-secondary text-lg leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0" style="animation: fadeUp 0.9s 0.15s ease both;">
-          OmniTag is the keychain-sized smart device that guards your door, tracks your belongings, clicks photos remotely, and lights your way — all in one featherweight clip.
+          OmniTag is the keychain-sized smart device that guards your door, tracks your belongings, multipurpose button, and lights your way — all in one featherweight clip.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start" style="animation: fadeUp 0.9s 0.3s ease both;">
@@ -382,7 +382,7 @@ tailwind.config = {
           </div>
           <div class="w-px h-10 bg-white/10"></div>
           <div>
-            <div class="font-display font-700 text-2xl text-white">&lt;35g</div>
+            <div class="font-display font-700 text-2xl text-white">&lt;65g</div>
             <div class="text-text-muted text-xs uppercase tracking-widest mt-1">Featherlight</div>
           </div>
           <div class="w-px h-10 bg-white/10"></div>
@@ -420,12 +420,26 @@ tailwind.config = {
             </div>
           </div>
 
-          <!-- Floating badge: NFC -->
+          <!-- Floating badge: wifi -->
           <div class="absolute -right-6 top-1/4 glass rounded-2xl px-4 py-3 z-20" style="border: 1px solid rgba(167,139,250,0.3); min-width: 120px;">
-            <div class="text-xs text-text-muted mb-1">NFC Ready</div>
-            <div class="text-sm font-semibold text-white">Tap & Share</div>
+            <div class="text-sm font-semibold text-white">wifi</div>
+            <div class="text-xs text-text-muted mb-1">wifi</div>
           </div>
-
+                <!-- Floating badge: Wi-Fi -->
+          <div class="absolute -right-6 top-1/2 glass neon-border rounded-2xl px-4 py-3 flex items-center gap-3 z-20" style="min-width: 140px;">
+           <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: rgba(34, 197, 94, 0.15);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+             <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+             <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+             <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+             <line x1="12" y1="20" x2="12.01" y2="20"/>
+            </svg>
+           </div>
+           <div>
+            <div class="text-xs font-semibold text-white">Wi-Fi 6E</div>
+            <div class="text-xs text-text-muted">Signal Strong</div>
+           </div>
+          </div>
           <!-- Floating badge: Motion alert -->
           <div class="absolute -bottom-4 right-4 glass rounded-2xl px-4 py-3 z-20" style="border: 1px solid rgba(245,158,11,0.3);">
             <div class="flex items-center gap-2">
