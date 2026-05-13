@@ -419,10 +419,23 @@ tailwind.config = {
               <div class="text-xs text-text-muted">Connected</div>
             </div>
           </div>
-
+          <!-- Floating badge: Battery -->
+           <div class="absolute -right-12 top-1/4 glass neon-border rounded-2xl px-4 py-3 flex items-center gap-3 z-20" style="min-width: 140px;">
+            <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: rgba(250, 204, 21, 0.15);">
+             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="6" width="18" height="12" rx="2" ry="2"/>
+              <line x1="23" y1="13" x2="23" y2="11"/>
+              <line x1="5" y1="10" x2="5" y2="14"/>
+             </svg>
+            </div>
+            <div>
+             <div class="text-xs font-semibold text-white">Battery</div>
+             <div class="text-xs text-text-muted">85% Charged</div>
+            </div>
+           </div>
          
                 <!-- Floating badge: Wi-Fi -->
-          <div class="absolute -right-24 top-1/2 glass neon-border rounded-2xl px-4 py-3 flex items-center gap-3 z-20" style="min-width: 140px;">
+          <div class="absolute -right-29 top-1/2 glass neon-border rounded-2xl px-4 py-3 flex items-center gap-3 z-20" style="min-width: 140px;">
            <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: rgba(34, 197, 94, 0.15);">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
              <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
@@ -436,6 +449,16 @@ tailwind.config = {
             <div class="text-xs text-text-muted">Signal Strong</div>
            </div>
           </div>
+          <!-- Floating badge: Power -->
+         <div class="absolute left-1/4 -top-10 glass neon-border rounded-2xl px-4 py-2 flex items-center gap-3 z-20">
+          <div class="flex items-center gap-2">
+           <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+           <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+           </span>
+           <span class="text-xs font-semibold text-white uppercase tracking-wider">System Active</span>
+          </div>
+         </div>
           <!-- Floating badge: Motion alert -->
           <div class="absolute -bottom-4 right-4 glass rounded-2xl px-4 py-3 z-20" style="border: 1px solid rgba(245,158,11,0.3);">
             <div class="flex items-center gap-2">
