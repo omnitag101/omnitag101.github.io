@@ -6,6 +6,7 @@
 <title>OmniTag — Smart Security Redefined</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
 tailwind.config = {
   theme: {
@@ -620,25 +621,75 @@ tailwind.config = {
         </div>
       </div>
 
-      <!-- Feature 3: Remote Shutter -->
+      <!-- Feature 3: Smart Switch (expanded from Remote Shutter) -->
       <div class="glass glass-hover rounded-3xl p-8 group reveal reveal-delay-3" style="border-radius:24px;">
-        <div class="flex items-start gap-5 mb-6">
+        <div class="flex items-start gap-5 mb-4">
           <div class="icon-ring w-16 h-16 shrink-0 rounded-2xl flex items-center justify-center relative" style="background: linear-gradient(135deg, rgba(16,185,129,0.12), rgba(16,185,129,0.06)); border: 1px solid rgba(16,185,129,0.2);">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-              <circle cx="12" cy="13" r="4"/>
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
             </svg>
           </div>
           <div>
             <div class="text-xs uppercase tracking-widest mb-1.5 font-600" style="color:#10b981;">Feature 03</div>
-            <h3 class="font-display font-700 text-2xl text-white">Remote Shutter</h3>
+            <h3 class="font-display font-700 text-2xl text-white">Smart Switch</h3>
+            <div class="text-xs mt-1" style="color: rgba(16,185,129,0.7);">One Button. Infinite Actions.</div>
           </div>
         </div>
-        <p class="text-text-secondary leading-relaxed mb-6">
-          Press the physical shutter button on OmniTag and capture the perfect shot from anywhere in the frame — no strangers, no awkward timers, no sprint-back blur. Prop your phone, step into the scene, and click. Designed for solo travelers, content creators, and anyone who deserves to be in their own memories.
+        <p class="text-text-secondary leading-relaxed mb-5">
+          OmniTag's physical button is more than a shutter — it's a programmable Smart Switch. One press, double press, or long hold can trigger entirely different actions on your phone. Assign any combination to fit your lifestyle.
         </p>
+
+        <!-- Smart Switch Action Grid -->
+        <div class="grid grid-cols-2 gap-2 mb-5" id="smart-switch-grid">
+          <div class="smart-action-card rounded-xl p-3 flex items-center gap-3 cursor-pointer transition-all" style="background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15);" onclick="toggleAction(this)">
+            <div class="text-xl">📸</div>
+            <div>
+              <div class="text-xs font-semibold text-white">Camera Shutter</div>
+              <div class="text-xs" style="color: rgba(136,136,170,0.8);">Single press</div>
+            </div>
+          </div>
+          <div class="smart-action-card rounded-xl p-3 flex items-center gap-3 cursor-pointer transition-all" style="background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15);" onclick="toggleAction(this)">
+            <div class="text-xl">📞</div>
+            <div>
+              <div class="text-xs font-semibold text-white">Answer Call</div>
+              <div class="text-xs" style="color: rgba(136,136,170,0.8);">Single press</div>
+            </div>
+          </div>
+          <div class="smart-action-card rounded-xl p-3 flex items-center gap-3 cursor-pointer transition-all" style="background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15);" onclick="toggleAction(this)">
+            <div class="text-xl">🆘</div>
+            <div>
+              <div class="text-xs font-semibold text-white">SOS Alert</div>
+              <div class="text-xs" style="color: rgba(136,136,170,0.8);">Triple press</div>
+            </div>
+          </div>
+          <div class="smart-action-card rounded-xl p-3 flex items-center gap-3 cursor-pointer transition-all" style="background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15);" onclick="toggleAction(this)">
+            <div class="text-xl">🔇</div>
+            <div>
+              <div class="text-xs font-semibold text-white">Silent Mode</div>
+              <div class="text-xs" style="color: rgba(136,136,170,0.8);">Double press</div>
+            </div>
+          </div>
+          <div class="smart-action-card rounded-xl p-3 flex items-center gap-3 cursor-pointer transition-all" style="background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15);" onclick="toggleAction(this)">
+            <div class="text-xl">▶️</div>
+            <div>
+              <div class="text-xs font-semibold text-white">Slide Next</div>
+              <div class="text-xs" style="color: rgba(136,136,170,0.8);">Single press</div>
+            </div>
+          </div>
+          <div class="smart-action-card rounded-xl p-3 flex items-center gap-3 cursor-pointer transition-all" style="background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15);" onclick="toggleAction(this)">
+            <div class="text-xl">🎵</div>
+            <div>
+              <div class="text-xs font-semibold text-white">Media Control</div>
+              <div class="text-xs" style="color: rgba(136,136,170,0.8);">Hold</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-xs text-center mb-4" style="color: rgba(16,185,129,0.6);">↑ Tap any action to preview — fully configurable in the app</div>
+
         <div class="flex flex-wrap gap-2">
-          <span class="text-xs px-3 py-1.5 rounded-full" style="background: rgba(16,185,129,0.1); color: #10b981; border: 1px solid rgba(16,185,129,0.2);">Physical Button</span>
+          <span class="text-xs px-3 py-1.5 rounded-full" style="background: rgba(16,185,129,0.1); color: #10b981; border: 1px solid rgba(16,185,129,0.2);">6+ Assignable Actions</span>
           <span class="text-xs px-3 py-1.5 rounded-full" style="background: rgba(16,185,129,0.1); color: #10b981; border: 1px solid rgba(16,185,129,0.2);">10m+ Range</span>
           <span class="text-xs px-3 py-1.5 rounded-full" style="background: rgba(16,185,129,0.1); color: #10b981; border: 1px solid rgba(16,185,129,0.2);">iOS & Android</span>
         </div>
@@ -1039,6 +1090,22 @@ tailwind.config = {
 </div>
 
 <script>
+// ─── EmailJS Init ───
+// SETUP INSTRUCTIONS:
+// 1. Go to https://www.emailjs.com/ and create a free account
+// 2. Add an Email Service (Gmail recommended) → copy your Service ID
+// 3. Create an Email Template with these variables:
+//    {{from_name}}, {{from_email}}, {{user_type}}, {{order_type}}, {{to_email}}
+// 4. Copy your Public Key from Account → API Keys
+// 5. Replace the placeholders below with your real values
+
+const EMAILJS_PUBLIC_KEY  = 'Go4-Dm-2CFWANBDQP';   // ← paste your EmailJS public key
+const EMAILJS_SERVICE_ID  = 'service_xk0skhs';   // ← paste your service ID (e.g. 'service_abc123')
+const EMAILJS_TEMPLATE_ID = 'template_6oloz8r';  // ← paste your template ID (e.g. 'template_xyz789')
+const YOUR_EMAIL          = 'omnitag10@gmail.com';    // ← your official email address
+
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
 // ─── Nav scroll behavior ───
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -1115,21 +1182,96 @@ function closeModal() {
 function handlePreOrder() { openModal(true); }
 function handleWaitlist() { openModal(false); }
 
-function submitWaitlist() {
-  const name = document.getElementById('modal-name').value.trim();
-  const email = document.getElementById('modal-email').value.trim();
+async function submitWaitlist() {
+  const name      = document.getElementById('modal-name').value.trim();
+  const email     = document.getElementById('modal-email').value.trim();
+  const userType  = document.getElementById('modal-type').value;
+  const submitBtn = document.getElementById('submit-text');
+  const orderType = submitBtn.textContent.includes('Pre-Order') ? 'Pre-Order' : 'Waitlist';
+
+  // ── Validation ──
   if (!name || !email) {
-    alert('Please enter your name and email.');
+    showToast('Please enter your name and email.', 'error');
     return;
   }
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    alert('Please enter a valid email address.');
+    showToast('Please enter a valid email address.', 'error');
     return;
   }
-  // Simulate submission
-  document.getElementById('modal-content').style.display = 'none';
-  document.getElementById('modal-success').style.display = 'block';
+  if (!userType) {
+    showToast('Please select your profession.', 'error');
+    return;
+  }
+
+  // ── Loading state ──
+  submitBtn.textContent = 'Sending…';
+  submitBtn.parentElement.disabled = true;
+
+  try {
+    // ── Send email to YOU (the owner) ──
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      order_type : orderType,
+      from_name  : name,
+      from_email : email,
+      user_type  : userType,
+      to_email   : YOUR_EMAIL,
+      subject    : `New ${orderType} — ${name}`,
+      message    : `New ${orderType} submission:\n\nName: ${name}\nEmail: ${email}\nProfession: ${userType}\nType: ${orderType}`,
+    });
+
+    // ── Show success ──
+    document.getElementById('modal-content').style.display = 'none';
+    document.getElementById('modal-success').style.display = 'block';
+
+  } catch (err) {
+    console.error('EmailJS error:', err);
+    // If EmailJS not yet configured, still show success (graceful fallback)
+    if (EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+      document.getElementById('modal-content').style.display = 'none';
+      document.getElementById('modal-success').style.display = 'block';
+    } else {
+      showToast('Something went wrong. Please try again.', 'error');
+      submitBtn.textContent = orderType === 'Pre-Order' ? 'Confirm Pre-Order →' : 'Reserve My Spot →';
+      submitBtn.parentElement.disabled = false;
+    }
+  }
+}
+
+// ─── Toast notification ───
+function showToast(message, type = 'info') {
+  const existing = document.getElementById('omni-toast');
+  if (existing) existing.remove();
+  const toast = document.createElement('div');
+  toast.id = 'omni-toast';
+  toast.textContent = message;
+  toast.style.cssText = `
+    position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
+    background: ${type === 'error' ? 'rgba(244,63,94,0.95)' : 'rgba(16,185,129,0.95)'};
+    color: #fff; padding: 12px 24px; border-radius: 12px; font-size: 13px;
+    z-index: 9999; backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    animation: fadeUp 0.3s ease;
+  `;
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 4000);
+}
+
+// ─── Smart Switch action toggle ───
+function toggleAction(card) {
+  const isActive = card.dataset.active === 'true';
+  if (isActive) {
+    card.dataset.active = 'false';
+    card.style.background = 'rgba(16,185,129,0.06)';
+    card.style.borderColor = 'rgba(16,185,129,0.15)';
+    card.style.transform = '';
+  } else {
+    card.dataset.active = 'true';
+    card.style.background = 'rgba(16,185,129,0.18)';
+    card.style.borderColor = 'rgba(16,185,129,0.5)';
+    card.style.transform = 'scale(1.03)';
+    card.style.boxShadow = '0 0 16px rgba(16,185,129,0.2)';
+  }
 }
 
 // Close modal on Escape
