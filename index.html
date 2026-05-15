@@ -1104,7 +1104,7 @@ const EMAILJS_SERVICE_ID  = 'service_xk0skhs';   // ← paste your service ID (e
 const EMAILJS_TEMPLATE_ID = 'template_6oloz8r';  // ← paste your template ID (e.g. 'template_xyz789')
 const YOUR_EMAIL          = 'omnitag10@gmail.com';    // ← your official email address
 
-emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+emailjs.init(EMAILJS_PUBLIC_KEY);
 
 // ─── Nav scroll behavior ───
 const navbar = document.getElementById('navbar');
@@ -1159,7 +1159,7 @@ function openModal(isPreOrder = false) {
   document.body.style.overflow = 'hidden';
   if (isPreOrder) {
     document.getElementById('modal-title').textContent = 'Pre-Order OmniTag';
-    document.getElementById('modal-desc').textContent = 'Lock in your Rs. 2,999 price. We\'ll confirm your pre-order via email.';
+    document.getElementById('modal-desc').textContent = 'Lock in your Rs. 1,450 price. We\'ll confirm your pre-order via email.';
     document.getElementById('submit-text').textContent = 'Confirm Pre-Order →';
   } else {
     document.getElementById('modal-title').textContent = 'Join the Waitlist';
