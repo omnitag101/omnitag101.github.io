@@ -475,39 +475,128 @@ tailwind.config = {
 </section>
 
 <!-- ═══════════════════════════════ PROBLEM → SOLUTION ═══════════════════════════════ -->
-<section id="solution" class="py-28 px-6 relative">
+<section id="solution" class="py-28 px-6 relative overflow-hidden">
+
+  <!-- Background accent -->
+  <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(244,63,94,0.04) 0%, transparent 70%);"></div>
+
   <div class="max-w-6xl mx-auto">
 
-    <div class="text-center mb-20 reveal">
+    <!-- Section Header -->
+    <div class="text-center mb-16 reveal">
       <div class="section-divider"></div>
-      <div class="pill mb-4 inline-flex">The Problem</div>
+      <div class="pill mb-5 inline-flex" style="background: rgba(244,63,94,0.08); border-color: rgba(244,63,94,0.25); color: #f43f5e;">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="#f43f5e"><circle cx="5" cy="5" r="5"/></svg>
+        The Problem
+      </div>
       <h2 class="font-display font-700 text-4xl md:text-5xl mt-4 mb-5" style="letter-spacing: -0.02em;">
         We've All Been There.
       </h2>
-      <p class="text-text-secondary text-lg max-w-xl mx-auto">The silent anxiety of everyday life that no one talks about.</p>
+      <p class="text-text-secondary text-lg max-w-xl mx-auto leading-relaxed">The silent anxiety of everyday life that most people just accept. You shouldn't have to.</p>
     </div>
 
-    <!-- Problems Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
-      <div class="problem-card reveal reveal-delay-1">
-        <div class="text-3xl mb-3">🚪</div>
-        <h3 class="font-display font-600 text-white mb-2">Hostel Door Anxiety</h3>
-        <p class="text-text-secondary text-sm leading-relaxed">Lying awake wondering if you locked your door — or if someone entered while you were away.</p>
+    <!-- Problems — New Professional Layout -->
+    <div class="grid md:grid-cols-2 gap-5 mb-8 reveal">
+
+      <!-- Problem 1: Door Anxiety -->
+      <div class="group relative rounded-2xl p-7 overflow-hidden transition-all duration-300 hover:translate-y-[-4px]"
+           style="background: rgba(244,63,94,0.04); border: 1px solid rgba(244,63,94,0.1);">
+        <div class="absolute top-0 left-0 w-1 h-full rounded-l-2xl" style="background: linear-gradient(180deg, #f43f5e, rgba(244,63,94,0.1));"></div>
+        <div class="flex items-start gap-5">
+          <div class="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center" style="background: rgba(244,63,94,0.1); border: 1px solid rgba(244,63,94,0.2);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-3 mb-2">
+              <h3 class="font-display font-700 text-white text-lg">Hostel Door Anxiety</h3>
+              <span class="text-xs px-2 py-0.5 rounded-full font-500" style="background: rgba(244,63,94,0.1); color: #f43f5e; border: 1px solid rgba(244,63,94,0.2);">Security</span>
+            </div>
+            <p class="text-text-secondary text-sm leading-relaxed">Lying awake at night wondering if you locked your door — or worse, if someone entered your room while you were away.</p>
+          </div>
+        </div>
       </div>
-      <div class="problem-card reveal reveal-delay-2">
-        <div class="text-3xl mb-3">🎒</div>
-        <h3 class="font-display font-600 text-white mb-2">Lost Bags & Wallets</h3>
-        <p class="text-text-secondary text-sm leading-relaxed">Left your bag on a café chair or your laptop in the library. You only notice when it's too late.</p>
+
+      <!-- Problem 2: Lost Bags -->
+      <div class="group relative rounded-2xl p-7 overflow-hidden transition-all duration-300 hover:translate-y-[-4px]"
+           style="background: rgba(0,212,255,0.04); border: 1px solid rgba(0,212,255,0.1);">
+        <div class="absolute top-0 left-0 w-1 h-full rounded-l-2xl" style="background: linear-gradient(180deg, #00d4ff, rgba(0,212,255,0.1));"></div>
+        <div class="flex items-start gap-5">
+          <div class="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center" style="background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.2);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-3 mb-2">
+              <h3 class="font-display font-700 text-white text-lg">Lost Bags & Belongings</h3>
+              <span class="text-xs px-2 py-0.5 rounded-full font-500" style="background: rgba(0,212,255,0.1); color: #00d4ff; border: 1px solid rgba(0,212,255,0.2);">Tracking</span>
+            </div>
+            <p class="text-text-secondary text-sm leading-relaxed">Your laptop left on a café chair. Your bag forgotten in the library. You only notice when it's already too late.</p>
+          </div>
+        </div>
       </div>
-      <div class="problem-card reveal reveal-delay-3">
-        <div class="text-3xl mb-3">📸</div>
-        <h3 class="font-display font-600 text-white mb-2">Awkward Group Photos</h3>
-        <p class="text-text-secondary text-sm leading-relaxed">Asking strangers to photograph you, or sprinting back after setting a 10-second timer.</p>
+
+      <!-- Problem 3: Smart Switch (replaces Awkward Group Photos) -->
+      <div class="group relative rounded-2xl p-7 overflow-hidden transition-all duration-300 hover:translate-y-[-4px]"
+           style="background: rgba(16,185,129,0.04); border: 1px solid rgba(16,185,129,0.1);">
+        <div class="absolute top-0 left-0 w-1 h-full rounded-l-2xl" style="background: linear-gradient(180deg, #10b981, rgba(16,185,129,0.1));"></div>
+        <div class="flex items-start gap-5">
+          <div class="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center" style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-3 mb-2">
+              <h3 class="font-display font-700 text-white text-lg">One Button, No Control</h3>
+              <span class="text-xs px-2 py-0.5 rounded-full font-500" style="background: rgba(16,185,129,0.1); color: #10b981; border: 1px solid rgba(16,185,129,0.2);">Smart Switch</span>
+            </div>
+            <p class="text-text-secondary text-sm leading-relaxed">Carrying your phone just to answer a call, take a photo, or mute it in meetings. One smart button should handle it all.</p>
+            <!-- Mini action pills -->
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              <span class="text-xs px-2 py-1 rounded-full" style="background: rgba(16,185,129,0.08); color: rgba(16,185,129,0.8); border: 1px solid rgba(16,185,129,0.15);">📸 Shutter</span>
+              <span class="text-xs px-2 py-1 rounded-full" style="background: rgba(16,185,129,0.08); color: rgba(16,185,129,0.8); border: 1px solid rgba(16,185,129,0.15);">📞 Answer Call</span>
+              <span class="text-xs px-2 py-1 rounded-full" style="background: rgba(16,185,129,0.08); color: rgba(16,185,129,0.8); border: 1px solid rgba(16,185,129,0.15);">🆘 SOS</span>
+              <span class="text-xs px-2 py-1 rounded-full" style="background: rgba(16,185,129,0.08); color: rgba(16,185,129,0.8); border: 1px solid rgba(16,185,129,0.15);">🔇 Silent</span>
+              <span class="text-xs px-2 py-1 rounded-full" style="background: rgba(16,185,129,0.08); color: rgba(16,185,129,0.8); border: 1px solid rgba(16,185,129,0.15);">▶️ Slides</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="problem-card reveal reveal-delay-4">
-        <div class="text-3xl mb-3">🔦</div>
-        <h3 class="font-display font-600 text-white mb-2">Powerless in the Dark</h3>
-        <p class="text-text-secondary text-sm leading-relaxed">Fumbling for your phone flashlight during a power cut or navigating a dark hotel room.</p>
+
+      <!-- Problem 4: Powerless in Dark -->
+      <div class="group relative rounded-2xl p-7 overflow-hidden transition-all duration-300 hover:translate-y-[-4px]"
+           style="background: rgba(245,158,11,0.04); border: 1px solid rgba(245,158,11,0.1);">
+        <div class="absolute top-0 left-0 w-1 h-full rounded-l-2xl" style="background: linear-gradient(180deg, #f59e0b, rgba(245,158,11,0.1));"></div>
+        <div class="flex items-start gap-5">
+          <div class="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center" style="background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-3 mb-2">
+              <h3 class="font-display font-700 text-white text-lg">Powerless in the Dark</h3>
+              <span class="text-xs px-2 py-0.5 rounded-full font-500" style="background: rgba(245,158,11,0.1); color: #f59e0b; border: 1px solid rgba(245,158,11,0.2);">Emergency</span>
+            </div>
+            <p class="text-text-secondary text-sm leading-relaxed">Fumbling for your phone flashlight during a power cut, or navigating a pitch-dark hotel room at 2am.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Connecting arrow to solution -->
+    <div class="flex justify-center my-12 reveal">
+      <div class="flex flex-col items-center gap-2">
+        <div class="text-xs uppercase tracking-widest" style="color: rgba(0,212,255,0.5);">OmniTag solves all of this</div>
+        <svg width="24" height="32" viewBox="0 0 24 32" fill="none">
+          <path d="M12 0 L12 24 M5 17 L12 24 L19 17" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+        </svg>
       </div>
     </div>
 
@@ -515,7 +604,7 @@ tailwind.config = {
     <div class="relative reveal">
       <div class="text-center mb-12">
         <div class="inline-flex items-center gap-3 mb-4">
-          <div class="h-px w-16 bg-gradient-to-r from-transparent to-cyan-DEFAULT" style="background: linear-gradient(90deg, transparent, #00d4ff);"></div>
+          <div class="h-px w-16" style="background: linear-gradient(90deg, transparent, #00d4ff);"></div>
           <span class="font-display text-cyan-DEFAULT font-600 tracking-wide" style="color:#00d4ff;">The OmniTag Solution</span>
           <div class="h-px w-16" style="background: linear-gradient(90deg, #00d4ff, transparent);"></div>
         </div>
@@ -621,75 +710,25 @@ tailwind.config = {
         </div>
       </div>
 
-      <!-- Feature 3: Smart Switch (expanded from Remote Shutter) -->
+      <!-- Feature 3: Remote Shutter -->
       <div class="glass glass-hover rounded-3xl p-8 group reveal reveal-delay-3" style="border-radius:24px;">
-        <div class="flex items-start gap-5 mb-4">
+        <div class="flex items-start gap-5 mb-6">
           <div class="icon-ring w-16 h-16 shrink-0 rounded-2xl flex items-center justify-center relative" style="background: linear-gradient(135deg, rgba(16,185,129,0.12), rgba(16,185,129,0.06)); border: 1px solid rgba(16,185,129,0.2);">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="3"/>
-              <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
             </svg>
           </div>
           <div>
             <div class="text-xs uppercase tracking-widest mb-1.5 font-600" style="color:#10b981;">Feature 03</div>
-            <h3 class="font-display font-700 text-2xl text-white">Smart Switch</h3>
-            <div class="text-xs mt-1" style="color: rgba(16,185,129,0.7);">One Button. Infinite Actions.</div>
+            <h3 class="font-display font-700 text-2xl text-white">Remote Shutter</h3>
           </div>
         </div>
-        <p class="text-text-secondary leading-relaxed mb-5">
-          OmniTag's physical button is more than a shutter — it's a programmable Smart Switch. One press, double press, or long hold can trigger entirely different actions on your phone. Assign any combination to fit your lifestyle.
+        <p class="text-text-secondary leading-relaxed mb-6">
+          Press the physical shutter button on OmniTag and capture the perfect shot from anywhere in the frame — no strangers, no awkward timers, no sprint-back blur. Prop your phone, step into the scene, and click. Designed for solo travelers, content creators, and anyone who deserves to be in their own memories.
         </p>
-
-        <!-- Smart Switch Action Grid -->
-        <div class="grid grid-cols-2 gap-2 mb-5" id="smart-switch-grid">
-          <div class="smart-action-card rounded-xl p-3 flex items-center gap-3 cursor-pointer transition-all" style="background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15);" onclick="toggleAction(this)">
-            <div class="text-xl">📸</div>
-            <div>
-              <div class="text-xs font-semibold text-white">Camera Shutter</div>
-              <div class="text-xs" style="color: rgba(136,136,170,0.8);">Single press</div>
-            </div>
-          </div>
-          <div class="smart-action-card rounded-xl p-3 flex items-center gap-3 cursor-pointer transition-all" style="background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15);" onclick="toggleAction(this)">
-            <div class="text-xl">📞</div>
-            <div>
-              <div class="text-xs font-semibold text-white">Answer Call</div>
-              <div class="text-xs" style="color: rgba(136,136,170,0.8);">Single press</div>
-            </div>
-          </div>
-          <div class="smart-action-card rounded-xl p-3 flex items-center gap-3 cursor-pointer transition-all" style="background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15);" onclick="toggleAction(this)">
-            <div class="text-xl">🆘</div>
-            <div>
-              <div class="text-xs font-semibold text-white">SOS Alert</div>
-              <div class="text-xs" style="color: rgba(136,136,170,0.8);">Triple press</div>
-            </div>
-          </div>
-          <div class="smart-action-card rounded-xl p-3 flex items-center gap-3 cursor-pointer transition-all" style="background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15);" onclick="toggleAction(this)">
-            <div class="text-xl">🔇</div>
-            <div>
-              <div class="text-xs font-semibold text-white">Silent Mode</div>
-              <div class="text-xs" style="color: rgba(136,136,170,0.8);">Double press</div>
-            </div>
-          </div>
-          <div class="smart-action-card rounded-xl p-3 flex items-center gap-3 cursor-pointer transition-all" style="background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15);" onclick="toggleAction(this)">
-            <div class="text-xl">▶️</div>
-            <div>
-              <div class="text-xs font-semibold text-white">Slide Next</div>
-              <div class="text-xs" style="color: rgba(136,136,170,0.8);">Single press</div>
-            </div>
-          </div>
-          <div class="smart-action-card rounded-xl p-3 flex items-center gap-3 cursor-pointer transition-all" style="background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15);" onclick="toggleAction(this)">
-            <div class="text-xl">🎵</div>
-            <div>
-              <div class="text-xs font-semibold text-white">Media Control</div>
-              <div class="text-xs" style="color: rgba(136,136,170,0.8);">Hold</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-xs text-center mb-4" style="color: rgba(16,185,129,0.6);">↑ Tap any action to preview — fully configurable in the app</div>
-
         <div class="flex flex-wrap gap-2">
-          <span class="text-xs px-3 py-1.5 rounded-full" style="background: rgba(16,185,129,0.1); color: #10b981; border: 1px solid rgba(16,185,129,0.2);">6+ Assignable Actions</span>
+          <span class="text-xs px-3 py-1.5 rounded-full" style="background: rgba(16,185,129,0.1); color: #10b981; border: 1px solid rgba(16,185,129,0.2);">Physical Button</span>
           <span class="text-xs px-3 py-1.5 rounded-full" style="background: rgba(16,185,129,0.1); color: #10b981; border: 1px solid rgba(16,185,129,0.2);">10m+ Range</span>
           <span class="text-xs px-3 py-1.5 rounded-full" style="background: rgba(16,185,129,0.1); color: #10b981; border: 1px solid rgba(16,185,129,0.2);">iOS & Android</span>
         </div>
@@ -1090,19 +1129,11 @@ tailwind.config = {
 </div>
 
 <script>
-// ─── EmailJS Init ───
-// SETUP INSTRUCTIONS:
-// 1. Go to https://www.emailjs.com/ and create a free account
-// 2. Add an Email Service (Gmail recommended) → copy your Service ID
-// 3. Create an Email Template with these variables:
-//    {{from_name}}, {{from_email}}, {{user_type}}, {{order_type}}, {{to_email}}
-// 4. Copy your Public Key from Account → API Keys
-// 5. Replace the placeholders below with your real values
-
-const EMAILJS_PUBLIC_KEY  = 'Go4-Dm-2CFWANBDQP';   // ← paste your EmailJS public key
-const EMAILJS_SERVICE_ID  = 'service_xk0skhs';   // ← paste your service ID (e.g. 'service_abc123')
-const EMAILJS_TEMPLATE_ID = 'template_6oloz8r';  // ← paste your template ID (e.g. 'template_xyz789')
-const YOUR_EMAIL          = 'omnitag10@gmail.com';    // ← your official email address
+// ─── EmailJS Config ───
+const EMAILJS_PUBLIC_KEY  = 'Go4-Dm-2CFWANBDQP';
+const EMAILJS_SERVICE_ID  = 'service_xk0skhs';
+const EMAILJS_TEMPLATE_ID = 'template_6oloz8r';
+const YOUR_EMAIL          = 'omnitag10@gmail.com';
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
@@ -1159,7 +1190,7 @@ function openModal(isPreOrder = false) {
   document.body.style.overflow = 'hidden';
   if (isPreOrder) {
     document.getElementById('modal-title').textContent = 'Pre-Order OmniTag';
-    document.getElementById('modal-desc').textContent = 'Lock in your Rs. 1,450 price. We\'ll confirm your pre-order via email.';
+    document.getElementById('modal-desc').textContent = 'Lock in your Rs. 2,999 price. We\'ll confirm your pre-order via email.';
     document.getElementById('submit-text').textContent = 'Confirm Pre-Order →';
   } else {
     document.getElementById('modal-title').textContent = 'Join the Waitlist';
@@ -1189,27 +1220,15 @@ async function submitWaitlist() {
   const submitBtn = document.getElementById('submit-text');
   const orderType = submitBtn.textContent.includes('Pre-Order') ? 'Pre-Order' : 'Waitlist';
 
-  // ── Validation ──
-  if (!name || !email) {
-    showToast('Please enter your name and email.', 'error');
-    return;
-  }
+  if (!name || !email) { showToast('Please enter your name and email.', 'error'); return; }
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    showToast('Please enter a valid email address.', 'error');
-    return;
-  }
-  if (!userType) {
-    showToast('Please select your profession.', 'error');
-    return;
-  }
+  if (!emailRegex.test(email)) { showToast('Please enter a valid email address.', 'error'); return; }
+  if (!userType) { showToast('Please select your profession.', 'error'); return; }
 
-  // ── Loading state ──
   submitBtn.textContent = 'Sending…';
   submitBtn.parentElement.disabled = true;
 
   try {
-    // ── Send email to YOU (the owner) ──
     await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
       order_type : orderType,
       from_name  : name,
@@ -1217,61 +1236,27 @@ async function submitWaitlist() {
       user_type  : userType,
       to_email   : YOUR_EMAIL,
       subject    : `New ${orderType} — ${name}`,
-      message    : `New ${orderType} submission:\n\nName: ${name}\nEmail: ${email}\nProfession: ${userType}\nType: ${orderType}`,
+      message    : `New ${orderType}:\nName: ${name}\nEmail: ${email}\nProfession: ${userType}`,
     });
-
-    // ── Show success ──
     document.getElementById('modal-content').style.display = 'none';
     document.getElementById('modal-success').style.display = 'block';
-
   } catch (err) {
     console.error('EmailJS error:', err);
-    // If EmailJS not yet configured, still show success (graceful fallback)
-    if (EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
-      document.getElementById('modal-content').style.display = 'none';
-      document.getElementById('modal-success').style.display = 'block';
-    } else {
-      showToast('Something went wrong. Please try again.', 'error');
-      submitBtn.textContent = orderType === 'Pre-Order' ? 'Confirm Pre-Order →' : 'Reserve My Spot →';
-      submitBtn.parentElement.disabled = false;
-    }
+    showToast('Something went wrong. Please try again.', 'error');
+    submitBtn.textContent = orderType === 'Pre-Order' ? 'Confirm Pre-Order →' : 'Reserve My Spot →';
+    submitBtn.parentElement.disabled = false;
   }
 }
 
-// ─── Toast notification ───
 function showToast(message, type = 'info') {
   const existing = document.getElementById('omni-toast');
   if (existing) existing.remove();
   const toast = document.createElement('div');
   toast.id = 'omni-toast';
   toast.textContent = message;
-  toast.style.cssText = `
-    position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
-    background: ${type === 'error' ? 'rgba(244,63,94,0.95)' : 'rgba(16,185,129,0.95)'};
-    color: #fff; padding: 12px 24px; border-radius: 12px; font-size: 13px;
-    z-index: 9999; backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-    animation: fadeUp 0.3s ease;
-  `;
+  toast.style.cssText = `position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:${type==='error'?'rgba(244,63,94,0.95)':'rgba(16,185,129,0.95)'};color:#fff;padding:12px 24px;border-radius:12px;font-size:13px;z-index:9999;backdrop-filter:blur(10px);box-shadow:0 8px 32px rgba(0,0,0,0.4);animation:fadeUp 0.3s ease;`;
   document.body.appendChild(toast);
   setTimeout(() => toast.remove(), 4000);
-}
-
-// ─── Smart Switch action toggle ───
-function toggleAction(card) {
-  const isActive = card.dataset.active === 'true';
-  if (isActive) {
-    card.dataset.active = 'false';
-    card.style.background = 'rgba(16,185,129,0.06)';
-    card.style.borderColor = 'rgba(16,185,129,0.15)';
-    card.style.transform = '';
-  } else {
-    card.dataset.active = 'true';
-    card.style.background = 'rgba(16,185,129,0.18)';
-    card.style.borderColor = 'rgba(16,185,129,0.5)';
-    card.style.transform = 'scale(1.03)';
-    card.style.boxShadow = '0 0 16px rgba(16,185,129,0.2)';
-  }
 }
 
 // Close modal on Escape
